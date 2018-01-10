@@ -3,7 +3,15 @@ const axios = require('axios');
 const cors = require('cors');
 
 const app = express();
-app.use(cors());
+const corsOptions = {
+  origin: [
+    'http://localhost:3000',
+    'http://localhost:3001',
+    'https://localhost:3000',
+    'https://localhost:3001',
+  ],
+}
+app.use(cors(corsOptions));
 
 app.get('/', function (req, res) {
   res.send('Hello World');
@@ -19,4 +27,4 @@ app.get('/data', (req, res) => {
     });
 });
 
-app.listen(3000);
+app.listen(3005);
