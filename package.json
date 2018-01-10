@@ -1,0 +1,12 @@
+{
+  "name": "school-plan-backend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.17.1",
+    "express": "^4.16.2"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
