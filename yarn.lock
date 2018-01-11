@@ -218,6 +218,10 @@ negotiator@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
 
+now@^9.0.1:
+  version "9.0.1"
+  resolved "https://registry.yarnpkg.com/now/-/now-9.0.1.tgz#6489ba61e6fe6bbe18bc301b35212b827465dd7b"
+
 object-assign@^4:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"

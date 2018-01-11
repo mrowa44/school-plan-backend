@@ -9,9 +9,7 @@ const corsOptions = {
     'http://localhost:3001',
     'https://localhost:3000',
     'https://localhost:3001',
-    'https://mrowa44.github.io/school-plan',
     'https://mrowa44.github.io',
-    'https://mrowa44.github.io/',
   ],
 }
 app.use(cors(corsOptions));
