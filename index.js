@@ -15,6 +15,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 app.get('/', function (req, res) {
+  console.log('dupa', 'index request');
   res.send('Hello World');
 });
 
