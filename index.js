@@ -1,6 +1,7 @@
 const express = require('express');
 const axios = require('axios');
 const cors = require('cors');
+const { CronJob } = require('cron');
 
 const URL = 'https://dziekanat.ka.edu.pl/Plany/PlanyTokow/3264';
 
@@ -67,6 +68,9 @@ app.get('/data', (req, res) => {
       console.log('/data request error', error);
     });
 });
+
+const cron = new CronJob('10 00 * * * *', getData, null, true, 'Europe/Warsaw');
+cron.start();
 
 console.log('Listening on port 3005.');
 app.listen(3005);
