@@ -47,10 +47,12 @@ function getData() {
     })
       .then(({ data }) => {
         saveCache(data);
+        axios.get('https://hc-ping.com/bb7b0c5c-ffc7-4f41-b12b-b47763d892c0');
         return data;
       })
       .catch((error) => {
         console.log('New data request error ', now, error);
+        axios.get('https://hc-ping.com/bb7b0c5c-ffc7-4f41-b12b-b47763d892c0/fail');
         return cache.documentData; // return old data in case of error
       });
   }
