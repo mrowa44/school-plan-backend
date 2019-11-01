@@ -45,6 +45,7 @@ function getData() {
     console.log('Requesting new data ', now);
     return axios.get(URL, {
       maxRedirects: 0,
+      timeout: 5000,
     })
       .then(({ data }) => {
         saveCache(data);
@@ -52,7 +53,7 @@ function getData() {
         return data;
       })
       .catch((error) => {
-        console.log('New data request error ', now, error);
+        console.log('New data request error ', now, error.code, error.response);
         axios.get('https://hc-ping.com/bb7b0c5c-ffc7-4f41-b12b-b47763d892c0/fail');
         return cache.documentData; // return old data in case of error
       });
@@ -62,7 +63,13 @@ function getData() {
 app.get('/data', (req, res) => {
   return getData()
     .then((data) => {
-      res.send(data);
+      if (data) {
+        console.log('/data request success');
+        res.send(data);
+      } else {
+        console.log('/data request empty');
+        res.send({});
+      }
     })
     .catch((error) => {
       console.log('/data request error', error);
