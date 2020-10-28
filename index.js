@@ -46,7 +46,7 @@ function getData() {
     console.log('Requesting new data ', now);
     return axios.get(URL, {
       maxRedirects: 0,
-      timeout: 5000,
+      timeout: 15000,
     })
       .then(({ data }) => {
         saveCache(data);
