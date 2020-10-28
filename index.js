@@ -46,7 +46,7 @@ function getData() {
     console.log('Requesting new data ', now);
     return axios.get(URL, {
       maxRedirects: 0,
-      timeout: 15000,
+      timeout: 30000,
     })
       .then(({ data }) => {
         saveCache(data);
@@ -77,8 +77,8 @@ app.get('/data', (req, res) => {
     });
 });
 
-const cron = new CronJob('10 00 * * * *', getData, null, true, 'Europe/Warsaw');
-cron.start();
+// const cron = new CronJob('10 00 * * * *', getData, null, true, 'Europe/Warsaw');
+// cron.start();
 
 console.log('Listening on port 3005.');
 app.listen(3005);
