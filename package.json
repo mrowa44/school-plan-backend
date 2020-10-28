@@ -10,11 +10,9 @@
     "axios": "^0.17.1",
     "cors": "^2.8.4",
     "cron": "^1.7.1",
-    "express": "^4.16.2",
-    "now": "^9.0.1"
+    "express": "^4.16.2"
   },
   "scripts": {
-    "start": "node index.js",
-    "deploy:prod": "now && now alias"
+    "start": "node index.js"
   }
 }
