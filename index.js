@@ -81,4 +81,4 @@ app.get('/data', (req, res) => {
 // cron.start();
 
 console.log('Listening on port 3005.');
-app.listen(3005);
+app.listen(process.env.PORT || 3005);

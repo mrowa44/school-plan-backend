@@ -2,10 +2,6 @@
   "name": "school-plan-backend",
   "version": "0.1.0",
   "private": true,
-  "now": {
-    "alias": "school-plan-backend",
-    "name": "school-plan-backend"
-  },
   "dependencies": {
     "axios": "^0.17.1",
     "cors": "^2.8.4",
