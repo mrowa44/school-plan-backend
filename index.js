@@ -3,8 +3,7 @@ const axios = require('axios');
 const cors = require('cors');
 const { CronJob } = require('cron');
 
-// const URL = 'https://dziekanat.ka.edu.pl/Plany/PlanyTokow/3264';
-const URL = 'https://dziekanat.ka.edu.pl/Plany/PlanyTokow/3924';
+const URL = 'https://dziekanat.ka.edu.pl/Plany/PlanyTokow/3264';
 
 const app = express();
 const corsOptions = {
